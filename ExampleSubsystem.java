@@ -123,66 +123,6 @@ public class ExampleSubsystem extends SubsystemBase {
         } 
   }
 
-  public void redFrame1() {
-    ledBuffer.setHSV(0, 0, 255, 255);
-    ledBuffer.setHSV(1, 0, 255, 255);
-    ledBuffer.setHSV(2, 0, 255, 255);
-
-  }
-
-  public void redFrame2() {
-    ledBuffer.setHSV(1, 0, 255, 255);
-    ledBuffer.setHSV(2, 0, 255, 255);
-    ledBuffer.setHSV(3, 0, 255, 255);
-
-  }
-
-  public void redFrame3() {
-    ledBuffer.setHSV(2, 0, 255, 255);
-    ledBuffer.setHSV(3, 0, 255, 255);
-    ledBuffer.setHSV(4, 0, 255, 255);
-
-  }
-
-  public void redFrame4() {
-    ledBuffer.setHSV(3, 0, 255, 255);
-    ledBuffer.setHSV(4, 0, 255, 255);
-    ledBuffer.setHSV(0, 0, 255, 255);
-
-  }
-
-  public void redFrame5() {
-    ledBuffer.setHSV(4, 0, 255, 255);
-    ledBuffer.setHSV(0, 0, 255, 255);
-    ledBuffer.setHSV(1, 0, 255, 255);
-
-  }
-
-  public Command servoShiftRight() {
-    return new FunctionalCommand(
-      () -> {
-
-      },
-
-      () -> {
-
-          redFrame1();
-          redFrame2();
-          redFrame3();
-          redFrame4();
-          redFrame5();
-        },
-
-      interrupted -> {
-
-      },
-
-      () -> false,
-
-    this);
-  
-  };
-
   public void servoRGB() {
     
 
@@ -207,10 +147,7 @@ public class ExampleSubsystem extends SubsystemBase {
         //System.out.println(System.out.format("Red Brightness: %d", redBrightness));
         setRed(redBrightness);
       }
-     
-            
-        //set to some color when not moving X
-        //higher range where it goes black when not moving
+      
         //moving leds
         //git
         //clean up code
